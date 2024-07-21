@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body{
+    height: 100vh;
+    width: 100%;
+}
+
+body{
+    background-color: azure;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    max-width: 1100px;
+    width: 80%;
+    background-color: white;
+    /* padding: 30px 40px 30px 60px; */
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.left{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    padding-right: 40px;
+}
+
+.left::before{
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    background-color: gainsboro;
+    left: 25%;
+    top: 50%;
+    transform: translate(-25%, -50%);
+}
+
+.box i{
+    font-size: 30px;
+    color: blueviolet;
+    margin-bottom: 10px;
+}
+
+.box .title{
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.box .details{
+    font-size: 16px;
+    color: gray;
+}
+
+.right{
+    width: 70%;
+}
+
+.msg-title{
+    font-size: 25px;
+    color: blueviolet;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.msg-info{
+    color: gray;
+}
+
+.msg-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.msg-form input, .msg-form textarea{
+    border: none;
+    outline: none;
+    background-color: rgb(235, 240, 240);
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.msg-form textarea{
+    resize: none;
+    height: 120px;
+}
+
+.msg-form .btn{
+    margin-top: 20px;
+    width: initial;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: blueviolet;
+    color: white;
+}
+
+.msg-form .btn:hover{
+    cursor: pointer;
+}
+
+
+@media(max-width: 900px){
+    .container{
+        width: 90%;
+    }
+
+    .left:before{
+        left: 26%;
+    }
+}
+
+@media(max-width: 800px) {
+    .content{
+        flex-direction: column-reverse;
+    }
+
+    .left, .right{
+        width: 100%;
+    }
+
+    .left{
+        flex-direction: row;
+        margin-top: 60px;
+        gap: 10px;
+        padding-right: 0;
+        justify-content: space-evenly;
+    }
+
+    .left::before{
+        display: none;
+    }
+
+    .box .details {
+        font-size: 15px;
+    }
+}
